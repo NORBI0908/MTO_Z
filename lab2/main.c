@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 int my_printf(char *format_string, char *param){
+	int a=0;
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
 			i++;
@@ -14,7 +16,18 @@ int my_printf(char *format_string, char *param){
 				else tekst[j] = param[j];
 			}
 			printf("%s",tekst);
-		}else
+		}else if((format_string[i] == '#') && (format_string[i+1] == '.'))
+         {
+			 i++;
+			 i++;
+			 int k=0;
+			 while(format_string[i]>=0&&format_string[i]<10)
+			 {
+				 a=a+((format_string[i]-'0')*pow(10,k));
+			 }
+			 printf("$s",tekst);
+         }
+         else
 			{
 				if(format_string[i]>=65&&format_string[i]<91)  putchar(tolower(param[j]));
 				else if(format_string[i]>=97&&format_string[i]<123) putchar(toupper(param[j]));
