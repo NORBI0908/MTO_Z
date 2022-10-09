@@ -5,7 +5,14 @@ int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
 			i++;
-			printf("%s",param);
+			char tekst[strlen(param)];
+			for(int j=0;j<strlen(param);j++)
+			{
+				if(param[j]>=65&&param[j]<91) tekst[j] = tolower(param[j]);
+				else if(param[j]>=97&&param[j]<123) tekst[j] = toupper(param[j]);
+				else tekst[j] = param[j];
+			}
+			printf("%s",tekst);
 		}else
 			putchar(format_string[i]);
 	}
