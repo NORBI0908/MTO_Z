@@ -15,7 +15,11 @@ int my_printf(char *format_string, char *param){
 			}
 			printf("%s",tekst);
 		}else
-			putchar(format_string[i]);
+			{
+				if(format_string[i]>=65&&format_string[i]<91)  putchar(tolower(param[j]));
+				else if(format_string[i]>=97&&format_string[i]<123) putchar(toupper(param[j]));
+				else putchar(format_string[i]); 
+			}
 	}
 	puts("");
 	return 0;
