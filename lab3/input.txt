@@ -6,9 +6,9 @@ jfl:jfldk # wynik
 tEst3
 fjdfSfds # k ....
 tesT4
-djfjkldsjf #k jjjjjj fsfjdljfdlsj flj ldfj
+#45k jjjjjj fsfjdljfdlsj flj ldfj
 TEST5
-gjjkdsljflds #k jdlkfjdslf
+gjjkdsljflds #3k
 test6
 fjdslkfjdl #k TTTTTTT
 test7
