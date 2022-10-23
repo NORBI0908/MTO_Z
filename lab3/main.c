@@ -23,14 +23,13 @@ int my_printf(char *format_string, char *param){
 			 i++;
 			 i++;
 			 int k=0;
-			 while(format_string[i]>=0&&format_string[i]<10)
+			 while(format_string[i]>=40&&format_string[i]<58)
 			 {
 				 a=a+((format_string[i]-'0')*pow(10,k));
 				 i++;
 				 k++;
 			 }
 			 
-			 i++;
 
 			 char newTekst[strlen(param)];
 			int m;
@@ -40,7 +39,6 @@ int my_printf(char *format_string, char *param){
 			 }
 
 			 printf("%s",newTekst);
-			 printf("%d",k);
          }
          else
 			{
