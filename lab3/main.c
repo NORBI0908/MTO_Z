@@ -30,15 +30,13 @@ int my_printf(char *format_string, char *param){
 				 k++;
 			 }
 			 
-
-			 char newTekst[strlen(param)];
 			int m;
-			 for(m=0;m<a;m++)
+			 for(m=0;m<a&&m<strlen(param);m++)
 			 {
-				 newTekst[m] = param[m];
+				 if(param[m]>=65&&param[m]<91)  putchar(tolower(param[m]));
+				else if(param[m]>=97&&param[m]<123) putchar(toupper(param[m]));
+				else putchar(param[m]);
 			 }
-
-			 printf("%s",newTekst);
          }
 		 else if((format_string[i] == '#') && (format_string[i+1]>=40&&format_string[i+1]<58))
          {
@@ -51,8 +49,6 @@ int my_printf(char *format_string, char *param){
 				 k++;
 			 }
 			 
-
-			 char newTekst[strlen(param)];
 			int m;
 			 for(m=0;m<a&&m<strlen(param);m++)
 			 {
