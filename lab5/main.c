@@ -2,19 +2,39 @@
 #include <string.h>
 
 int my_printf(char *format_string, char *param){
-	for(int i=0;i<strlen(format_string)-1;i++){
-		if((format_string[i] == '#') && (format_string[i+1] == 'g')){
+	int i;
+	for(i=0;i<strlen(format_string)-1;i++){
+		if((format_string[i] == '#') && (format_string[i+1] == 'X') && (format_string[i+2] == 'g'))
+		{
 			i++;
-			int j=strlen(param)-2;
-			for(j;j>=0;j--)
+			i++;
+			i++;
+			int j;
+			for(j=0;j<=strlen(param)-2;j++)
 			{
-			    putchar(param[j]);
+			    putchar(decrease_num(param[j]));
 			}
-		}else
+		}
 			putchar(format_string[i]);
 	}
 	puts("");
 	return 0;
+}
+
+int decrease_num(int a)
+{
+	if(a>48&&a<=57)
+	{
+		a = a-1;
+	}
+	else if(a==48)
+	{
+		a = 57;
+	}
+	else
+		a = 1;
+	
+	return a;
 }
 
 int main(int argc, char *argv[]){
