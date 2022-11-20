@@ -27,7 +27,7 @@ int my_printf(char *format_string, char *param){
 			i++;
 			i++;
 			int j;
-			for(j=0;j<=num&&j<strlen(param)-1;j++)
+			for(j=0;j<num&&j<strlen(param)-1;j++)
 			{
 			    putchar(decrease_num(param[j]));
 			}
