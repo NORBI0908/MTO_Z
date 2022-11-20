@@ -1,6 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
+int decrease_num(int a)
+{
+	if(a>48&&a<=57)
+	{
+		a = a-1;
+	}
+	else if(a==48)
+	{
+		a = 57;
+	}
+	else
+		a = 1;
+	
+	return a;
+}
+
 int my_printf(char *format_string, char *param){
 	int i;
 	for(i=0;i<strlen(format_string)-1;i++){
@@ -20,22 +36,6 @@ int my_printf(char *format_string, char *param){
 	}
 	puts("");
 	return 0;
-}
-
-int decrease_num(int a)
-{
-	if(a>48&&a<=57)
-	{
-		a = a-1;
-	}
-	else if(a==48)
-	{
-		a = 57;
-	}
-	else
-		a = 1;
-	
-	return a;
 }
 
 int main(int argc, char *argv[]){
