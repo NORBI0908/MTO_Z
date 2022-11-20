@@ -4,13 +4,14 @@
 int my_printf(char *format_string, char *param){
 	int i;
 	for(i=0;i<strlen(format_string)-1;i++){
-		if((format_string[i] == '#') && (format_string[i+1] == 'X') && (format_string[i+2] == 'g'))
+		if((format_string[i] == '#') && (format_string[i+1] > '0' && format_string[i+1] <= '9') && (format_string[i+2] == 'g'))
 		{
+			int num = format_string[i+1] - '0';
 			i++;
 			i++;
 			i++;
 			int j;
-			for(j=0;j<=strlen(param)-2;j++)
+			for(j=0;j<=num&&j<strlen(param)-1;j++)
 			{
 			    putchar(decrease_num(param[j]));
 			}
