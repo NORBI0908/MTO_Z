@@ -25,7 +25,6 @@ int my_printf(char *format_string, char *param){
 		if((format_string[i] == '#') && (format_string[i+1] == '.') && (format_string[i+2] > '0' && format_string[i+2] <= '9') && (format_string[i+3] == 'g'))
 		{
 			int num = format_string[i+2] - '0';
-			printf("%d",num);
 			i++;
 			i++;
 			i++;
