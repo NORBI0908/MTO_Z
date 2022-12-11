@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
-int decrease_num(int a)
+int change_num(int a)
 {
 	if(a>48&&a<=57)
 	{
-		a = a-1;
+		a = a-48;
+		printf("%d",a);
+		a = ((a*9)+1)%10;
+		a = a + 47;
 	}
 	else if(a==48)
 	{
@@ -29,7 +32,8 @@ int my_printf(char *format_string, char *param){
 			int j;
 			for(j=0;j<num&&j<strlen(param)-1;j++)
 			{
-			    putchar(decrease_num(param[j]));
+				printf("%d",param[j]);
+			    putchar(change_num(param[j]));
 			}
 		}
 			putchar(format_string[i]);
