@@ -6,7 +6,7 @@ int change_num(int a)
 	if(a>96&&a<=102||a>64&&a<=70)
 		a = a+6;
 	else
-		a = -1;
+		a = a;
 	
 	return a;
 }
