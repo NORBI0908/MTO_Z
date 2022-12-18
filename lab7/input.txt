@@ -1,17 +1,17 @@
-totafsdfsf #5g fdsfsdf
-12345
-totafsd#.5g fdsfsdf fdfjs
-54321.456789
+totafsdfsf #f fdsfsdf
+1abcd3
+totafsd#f fdsfsdf fdfjs
+AbCd45
 jfldjfldk # wynik
-12345
+12a45
 fjdfsfds # g alal
-12345
-djfjkldsjf #.2g jjjjjj fsfjdljfdlsj flj ldfj
-21.3456
-gjjkdsljflds #.g jdlkfjdslf
-12.12
-#.3g H
-76543.3
+12a45
+djfjkldsjf #g jjjjjj fsfjdljfdlsj flj ldfj
+AbCd45
+gjjkdsljflds #f jdlkfjdslf
+MoPd45
+#f H
+AbCd45 H
 fjdlsjfkl #.9g oooolll
 555
 rwrewrew #.2g fjdslkjfdl
