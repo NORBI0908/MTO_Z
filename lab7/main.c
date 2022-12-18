@@ -14,6 +14,7 @@ int my_printf(char *format_string, char *param){
 		if((format_string[i] == '#') && (format_string[i+1] == 'j'))
 		{
 			i++;
+			i++;
 			int j;
 			int k=0;
 			for(j=0;j<strlen(param)-1;j++)
@@ -21,7 +22,7 @@ int my_printf(char *format_string, char *param){
 				if(param[j]>96&&param[j]<=102||param[j]>64&&param[j]<=70)
 			    	putchar(change_num(param[j]));
 			    else
-			    	putchar(param[j])
+			    	putchar(param[j]);
 			}
 		}
 			putchar(format_string[i]);
