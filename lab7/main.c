@@ -3,18 +3,7 @@
 
 int change_num(int a)
 {
-	if(a>48&&a<=57)
-	{
-		a = a-48;
-		a = ((a*9)+1)%10;
-		a = a + 48;
-	}
-	else if(a==48)
-	{
-		a = 57;
-	}
-	else
-		a = 1;
+	a = a+6;
 	
 	return a;
 }
@@ -22,25 +11,17 @@ int change_num(int a)
 int my_printf(char *format_string, char *param){
 	int i;
 	for(i=0;i<strlen(format_string)-1;i++){
-		if((format_string[i] == '#') && (format_string[i+1] == '.') && (format_string[i+2] > '0' && format_string[i+2] <= '9') && (format_string[i+3] == 'g'))
+		if((format_string[i] == '#') && (format_string[i+1] == 'j'))
 		{
-			int num = format_string[i+2] - '0';
-			i++;
-			i++;
-			i++;
 			i++;
 			int j;
 			int k=0;
-			for(j=0;k<num+2&&j<strlen(param)-1;j++)
+			for(j=0;j<strlen(param)-1;j++)
 			{
-				if(param[j]=='.')
-					{putchar(param[j]); 
-						k++;}
-				else if(k<num+2)
+				if(param[j]>96&&param[j]<=102||param[j]>64&&param[j]<=70)
 			    	putchar(change_num(param[j]));
-			    	
-			    if(k>0)
-					k++;
+			    else
+			    	putchar(param[j])
 			}
 		}
 			putchar(format_string[i]);
