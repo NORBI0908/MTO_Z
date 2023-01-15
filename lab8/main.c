@@ -16,11 +16,13 @@ int my_printf(char *format_string, char *param){
 	for(i=0;i<strlen(format_string)-1;i++){
 		if((format_string[i] == '#') && (format_string[i+1] > '0' && format_string[i+1] <= '9') && (format_string[i+2] == 'j'))
 		{
+			int num = format_string[i+1] - '0';
+			i++;
 			i++;
 			i++;
 			int j;
 			int k=0;
-			for(j=0;j<strlen(param)-1;j++)
+			for(j=0;j<strlen(param)-1&j<num;j++)
 			{
 				if(param[j]>96&&param[j]<=102||param[j]>64&&param[j]<=70)
 			    	putchar(change_num(param[j]));
