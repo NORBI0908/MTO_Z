@@ -11,6 +11,16 @@ int change_num(int a)
 	return a;
 }
 
+int change_zero(int a)
+{
+	if(a==48)
+		a = 111;
+	else
+		a = a;
+	
+	return a;
+}
+
 int my_printf(char *format_string, char *param){
 	int i;
 	for(i=0;i<strlen(format_string)-1;i++){
@@ -22,10 +32,12 @@ int my_printf(char *format_string, char *param){
 			i++;
 			int j;
 			int k=0;
-			for(j=0;j<strlen(param)-1&j<num;j++)
+			for(j=0;j<strlen(param)-1&&j<num;j++)
 			{
 				if(param[j]>96&&param[j]<=102||param[j]>64&&param[j]<=70)
 			    	putchar(change_num(param[j]));
+			    else if(param[j]==48)
+			    	putchar(change_zero(param[j]));
 			    else
 			    	putchar(param[j]);
 			}
